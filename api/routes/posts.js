@@ -47,7 +47,7 @@ router.get("/get/:id",async (req,res)=>{
 router.put("/publish/:id",async (req,res)=>{
 
     try{
-        const updatedPost = await Post.findByIdAndUpdate(req.params.id,{$set:req.body},{new:true});
+        const updatedPost = await Post.findByIdAndUpdate(req.params.id,{isPublished:true},{new:true});
         res.status(200).json(updatedPost); 
     }catch(err){
         res.status(500).json(err);
