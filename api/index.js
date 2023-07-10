@@ -22,5 +22,5 @@ app.use("/api/users",userRoute);
 app.use("/api/posts",postRoute);
 
 app.listen(8800,()=>{
-    console.log("Backend server running...");
+    console.log("Backend server running....");
 });
